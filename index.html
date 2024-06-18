@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script defer src="./js/main.js"></script>
+    <title>Formulario</title>
+</head>
+<body>
+    <div class="contenedorFormulario">
+        <form id="formulario" class="fondoEstilo1">
+            <h3>Formulario de Datos Personales</h3>
+            <div id="cuerpoFormulario" class="cuerpoFormulario">
+                <div class="itemCuerpoFormulario">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Ingrese su nombre"/>
+                </div>
+                <!-- APELLIDO -->
+                <div class="itemCuerpoFormulario">
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="apellido" name="apellido" placeholder="Ingrese su apellido" required />
+                </div>
+                <!-- EMAIL -->
+                <div class="itemCuerpoFormulario">
+                    <label for="correo">Email:</label>
+                    <input type="email" id="correo" placeholder="Ingrese su email" required />
+                </div>
+                <!-- FECHA -->
+                <div class="itemCuerpoFormulario">
+                    <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+                    <input type="date" id="fechaNacimiento" name="fechaNacimiento" />
+                </div>
+                <!-- PAIS -->
+                <div class="itemCuerpoFormulario">
+                    <label for="paisResidencia">País de Residencia:</label>
+                    <input type="text" id="paisResidencia" name="paisResidencia" placeholder="Ingrese su país" required/>
+                </div>
+                <div id="botonEnviarFormulario">
+                    <button id="botonEnviar" type="submit">Enviar</button>
+                </div>
+            </div>
+            <!-- BOTONES ESTILOS -->
+            <div id="botonesEstilosFormulario">
+                <button id="botonEstilo1" type="submit">Estilo 1</button>
+                <button id="botonEstiloAltoContraste" type="submit">Estilo 2</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
