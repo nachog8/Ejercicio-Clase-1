@@ -5,9 +5,23 @@
     box-sizing: border-box;
 }
 
+/* Fondo del formulario con estilo 1 */
+.fondoEstilo1 {
+    background-color: rgb(83, 83, 83);
+    max-width: 400px; /* Ajustar el ancho máximo del formulario */
+    width: 100%; /* Asegurar que el formulario ocupe el 100% de su contenedor */
+    margin-top: 2rem; /* Añadir margen superior */
+    margin-bottom: 2rem; /* Añadir margen inferior */
+}
+
+/* Fondo de alto contraste */
+.fondoAltoContraste {
+    background-color: black;
+}
+
 /* Contenedor del formulario */
-.contenedorFormulario {
-    height: 100vh;
+.container {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,7 +32,10 @@
 #formulario {
     padding: 20px;
     flex-direction: column; 
-    height: 90%;
+    height: auto;
+    width: 80%; /* Ajusta este valor según tus necesidades */
+    max-width: 800px; /* Puedes establecer un ancho máximo si lo deseas */
+    margin: 30px 0px;
 }
 
 /* Cuerpo del formulario */
@@ -26,71 +43,45 @@
     border: 2px solid white;  
 }
 
+/* Contenedor de botones */
+.contenedorBotones {
+    display: flex;
+    justify-content: space-between; /* Espacio entre los botones */
+    gap: 10px; /* Espacio entre los botones */
+}
+
+/* Botones */
+.boton {
+    flex: 1; /* Los botones ocuparán el mismo espacio */
+}
+
 /* Cuerpo del formulario con contraste */
 .cuerpoFormularioContraste {
     border: 2px solid rgb(72, 72, 72);
-    .itemCuerpoFormulario{
-        input{
-            background-color: rgb(51, 51, 51);
-            border: 2px solid rgb(72, 72, 72);
-            color: whitesmoke;
-        }
-        input::placeholder{
-            color: white;
-        }
-    }
 }
 
-/* Item del cuerpo del formulario */
-.cuerpoFormulario .itemCuerpoFormulario {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    gap: 3px;
+.cuerpoFormularioContraste .form-control {
+    background-color: rgb(51, 51, 51);
+    border: 2px solid rgb(72, 72, 72);
+    color: whitesmoke;
+}
+
+.cuerpoFormularioContraste .form-control::placeholder {
     color: white;
-    input{
-        padding: 2px;
-    }
 }
 
 /* Botón enviar */
-.cuerpoFormulario #botonEnviar {
-    margin: 10px;
-    width: 350px;
+#botonEnviar {
+    margin: 10px 0;
+    width: 100%;
     border: 2px solid rgb(77, 62, 211);
-    padding: 7px;
     background-color: rgb(77, 62, 211);
     color: white;
     font-weight: bold;
     font-size: 0.8rem;
 }
 
-/* Fondo del formulario con estilo 1 */
-.fondoEstilo1 {
-    background-color: rgb(83, 83, 83);
-}
 
-.itemCuerpoFormulario{
-    flex-direction: row;
-    padding-bottom: 5px;
-    padding-top: 5px;
-}
-
-.itemCuerpoFormularioBorde{
-    #item{
-        border: 2px solid rgb(51, 51, 51); 
-    }
-}
-
-/* Botones de estilos */
-#botonesEstilosFormulario {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin-top: 10px;
-}
 
 #botonesEstilosFormulario button {
     width: 120px;
@@ -102,33 +93,25 @@
     border: 2px solid rgb(77, 62, 211);
 }
 
-/* Fondo de alto contraste */
-.fondoAltoContraste {
-    background-color: black;
-}
-
-/* Botones con alto contraste */
-.botonesEstilosAltoContraste #botonEnviar, 
-.botonesEstilosAltoContraste #botonEstilo1, 
-.botonesEstilosAltoContraste #botonEstiloAltoContraste {
-    background-color: rgb(255, 214, 2);
-    color: black;
-    border: 2px solid rgb(255, 214, 2);
-}
-
 /* Estilo del título */
 h3 {
     color: white;
     margin-bottom: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-size: 1.5rem;
 }
 
 /* Efecto hover en botones */
-#botonEnviar:hover,
-#botonEstilo1:hover,
-#botonEstiloAltoContraste:hover {
+.btn:hover {
     cursor: pointer;
+}
+
+.titulos{
+    color: white;
+}
+
+/* Sombra personalizada para los inputs en foco */
+input:focus {
+    box-shadow: 0 0 5px 2px rgb(77, 62, 211) !important; /* Sombra en color rgb(77, 62, 211) */
+    outline: none !important; /* Elimina el borde predeterminado del navegador */
+    border-color: rgb(77, 62, 211) !important; /* Cambia el color del borde al mismo color violeta */
 }
